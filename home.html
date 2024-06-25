@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Cards Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 200px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.shoe {
+    width: 100%;
+    padding: 20px;
+}
+
+.info {
+    color: #fff;
+    padding: 10px 0;
+}
+
+#card1 {
+    background-color: #00aaff;
+    
+}
+
+#card2 {
+    background-color: #8000ff;
+}
+
+</style>
+<body>
+    <div class="card-container">
+        <div class="card" id="card1">
+            <img src="hoka-zinal-13085-1643565794-removebg-preview.png" alt="Nike Blue" class="shoe">
+            <div class="info">
+                <h2>SNEAKERS</h2>
+                <p>Nike Blue</p>
+            </div>
+        </div>
+        <div class="card" id="card2">
+            <img src="hoka-zinal-13085-1643565794-removebg-preview.png" alt="Nike Purple" class="shoe">
+            <div class="info">
+                <h2>SNEAKERS</h2>
+                <p>Nike Purple</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const card1 = document.getElementById('card1');
+    const card2 = document.getElementById('card2');
+
+    card1.addEventListener('mouseenter', () => {
+        card1.style.transform = 'scale(1.05)';
+        card1.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.5)';
+    });
+
+    card1.addEventListener('mouseleave', () => {
+        card1.style.transform = 'scale(1)';
+        card1.style.boxShadow = 'none';
+    });
+
+    card2.addEventListener('mouseenter', () => {
+        card2.style.transform = 'scale(1.05)';
+        card2.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.5)';
+    });
+
+    card2.addEventListener('mouseleave', () => {
+        card2.style.transform = 'scale(1)';
+        card2.style.boxShadow = 'none';
+    });
+});
+
+    </script>
+</body>
+</html>
